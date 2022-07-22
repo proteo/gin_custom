@@ -1,0 +1,342 @@
+/**
+ * @file
+ * Custom styling for compatibility with Gin admin theme.
+ */
+
+/*******************************************************************************
+Form item descriptions.
+*******************************************************************************/
+
+.form-item__description,
+.fieldset__description {
+  max-width: 48rem;
+}
+
+/*******************************************************************************
+Date form element.
+*******************************************************************************/
+
+/* Remove the styling of the fieldset */
+.field--type-datetime > fieldset {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+.field--type-datetime > fieldset .fieldset__label {
+  padding-top: 0;
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0.5rem;
+}
+.field--type-datetime > fieldset .fieldset__wrapper {
+  margin-right: 0;
+  margin-left: 0;
+  margin-bottom: 0;
+}
+
+/* Reduces vertical separation of input fields */
+.field--type-datetime .form-datetime-wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.field--type-datetime .fieldset__description {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+/*******************************************************************************
+Read-only form elements.
+*******************************************************************************/
+
+.form-element[readonly] {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.form-element--type-select[readonly] {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 9'%3E%3Cpath fill='none' stroke-width='1.5' d='M1 1L7 7L13 1' stroke='%238e929c'/%3E%3C/svg%3E%0A");
+}
+
+/*******************************************************************************
+Vertical tabs
+*******************************************************************************/
+
+.vertical-tabs__menu-item-summary {
+  color: var(--colorGinTextLight);
+  font-size: 0.79rem;
+  line-height: 1.0625rem;
+  display: block;
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 85em) {
+  .vertical-tabs__items,
+  .vertical-tabs__items .vertical-tabs__item {
+    border-radius: 8px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/*******************************************************************************
+Media library
+*******************************************************************************/
+
+/* Remove unnecessary left border from the outer container */
+#media-library-wrapper .media-library-content {
+  border: none;
+}
+
+/* Simplify visual appearance of main form elements. */
+#media-library-wrapper .views-form,
+#media-library-wrapper .view-header,
+#media-library-wrapper .views-exposed-form {
+  border: none;
+  padding: 0;
+  box-shadow: none;
+}
+
+/*******************************************************************************
+Image crop widget
+*******************************************************************************/
+
+/* Allow the widget to expand to fill its container. */
+.field--widget-image-widget-crop .form-managed-file.no-upload {
+  width: 100%;
+}
+
+/* Remove unnecessary spacing around the actual image. */
+.image-data__crop-wrapper .details-wrapper details {
+  border: none;
+  margin: 0;
+}
+.image-data__crop-wrapper .details-wrapper details > .details-wrapper {
+  border: none;
+  margin: 0;
+}
+/* Hides the redundant summary. */
+.image-data__crop-wrapper .details-wrapper details summary {
+  display: none;
+}
+
+
+/*******************************************************************************
+Multiselect widget
+*******************************************************************************/
+
+.multiselect-wrapper label {
+  color: var(--colorGinTextLight);
+  font-size: 0.79rem;
+  font-weight: normal;
+  line-height: 1.0625rem;
+  margin-bottom: 0.35rem;
+  display: block;
+}
+.multiselect-wrapper select.form-multiselect {
+  border: 1px solid var(--colorGinFormElementBorder);
+  border-radius: 6px;
+  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 8px 12px;
+}
+
+@media (min-width: 768px) {
+  .multiselect-wrapper {
+    display: flex;
+  }
+  .multiselect-btns > ul {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    float: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 992px) {
+  .multiselect-btns {
+    padding: 0 1rem;
+  }
+  .multiselect-btns > ul > li.multiselect-add,
+  .multiselect-btns > ul > li.multiselect-remove {
+    width: 24px;
+  }
+}
+
+/*******************************************************************************
+Autocomplete Deluxe widget
+*******************************************************************************/
+
+/* Apply the same spacing as other form elements */
+.field--widget-autocomplete-deluxe {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Style the text box to match the Gin styling */
+div.autocomplete-deluxe-container {
+  border-radius: 6px;
+  padding: 8px;
+}
+div.autocomplete-deluxe-container:hover {
+  border-color: var(--colorGinText);
+  -webkit-box-shadow: inset 0 0 0 1px var(--colorGinText);
+  box-shadow: inset 0 0 0 1px var(--colorGinText);
+}
+
+/* Make items match the Gin styling */
+.autocomplete-deluxe-container .autocomplete-deluxe-item {
+  color: var(--colorGinText);
+  font-size: 0.889rem;
+  line-height: 1;
+  background-color: var(--colorGinLayer4Background);
+  border: 2px solid var(--colorGinLayer4Background);
+  border-radius: 4px;
+  box-shadow: none;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 30px;
+  margin: 0 5px 0 0 !important;
+  padding: 5px 35px 5px 8px;
+  -webkit-transition: 0.1s all ease-in;
+  transition: 0.1s all ease-in;
+}
+.autocomplete-deluxe-container .autocomplete-deluxe-item:hover,
+.autocomplete-deluxe-container .autocomplete-deluxe-item:active {
+  background-color: var(--colorGinLayer2Background) !important;
+  border-color: var(--colorGinFocus) !important;
+}
+
+/* Close button inside each tag item */
+.autocomplete-deluxe-item .autocomplete-deluxe-item-delete {
+  background: url("/themes/contrib/gin/media/icons/action-link/remove.svg") no-repeat center !important;
+  background-size: 11px !important;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.5;
+  top: 50%;
+  right: 2px !important;
+  transform: translateY(-50%);
+  -webkit-transition: 0.1s all ease-out;
+  transition: 0.1s all ease-out;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+.autocomplete-deluxe-item .autocomplete-deluxe-item-delete:hover,
+.autocomplete-deluxe-item .autocomplete-deluxe-item-delete:active {
+  background-color: var(--colorGinFocus) !important;
+  opacity: 1;
+}
+
+/* The input element */
+div.autocomplete-deluxe-container:not(.autocomplete-deluxe-multiple) input.autocomplete-deluxe-form {
+  background: none !important;
+  border-radius: 4px;
+}
+
+div.autocomplete-deluxe-container.autocomplete-deluxe-multiple input.autocomplete-deluxe-form {
+  line-height: 1;
+  padding: 3px 6px;
+  border: 2px solid transparent;
+  border-radius: 4px;
+}
+div.autocomplete-deluxe-container.autocomplete-deluxe-multiple input.autocomplete-deluxe-form:focus {
+  border-color: var(--colorGinFocus);
+}
+
+/* Reposition the throbber in the middle of the text box */
+.autocomplete-deluxe-container .autocomplete-deluxe-throbber {
+  background-position: center center !important;
+  top: 50% !important;
+  transform: translateY(-50%);
+}
+
+/* Replaces the throbber (loading) image */
+.autocomplete-deluxe-open {
+  background: url("/modules/contrib/autocomplete_deluxe/assets/images/search-autocompleting.svg") no-repeat 50% 50%;
+  background-size: 40px;
+}
+
+/* Remove spacing between the field and the description text */
+.autocomplete-deluxe-value-container > .form-item {
+  margin: 0;
+}
+
+/*******************************************************************************
+Node form.
+*******************************************************************************/
+
+/* Makes the form wider as we're using vertical tabs from Field Group. This
+ width should fit the form in a 1920px screen without wasting any space. */
+.gin--edit-form .region-sticky__items__inner,
+.gin--edit-form .page-wrapper__node-edit-form .node-form,
+.gin--edit-form .page-wrapper__node-edit-form .admin-list,
+.gin--edit-form .page-wrapper__node-edit-form .region-meta,
+.gin--edit-form .page-wrapper__node-edit-form .sticky-shadow,
+.gin--edit-form .page-wrapper__node-edit-form .messages-list,
+.gin--edit-form .page-wrapper__node-edit-form .node-confirm-form,
+.gin--edit-form .page-wrapper__node-edit-form .block-local-tasks-block,
+.gin--edit-form .page-wrapper__node-edit-form .block-system-main-block,
+.gin--edit-form .page-wrapper__node-edit-form .help {
+  max-width: 1480px;
+}
+
+/*******************************************************************************
+Revision log widget.
+*******************************************************************************/
+
+.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--widget-revision-log-widget .accordion__item {
+  margin: 1.5rem -1.5rem -1.5rem -1.5rem;
+  border-left: none;
+  border-bottom: none;
+}
+.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--widget-revision-log-widget .claro-details__wrapper {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--widget-revision-log-widget .accordion__item .claro-details__summary {
+  display: block;
+  padding-left: 3rem;
+}
+.gin--edit-form .page-wrapper__node-edit-form .layout-region-node-secondary .field--widget-revision-log-widget .accordion__item .claro-details__summary::before {
+  top: 2rem;
+  left: 1.5rem;
+}
+
+/*******************************************************************************
+Inline form items.
+*******************************************************************************/
+
+/* Increase space between inline checkboxes. */
+.container-inline .form-item + .form-type--checkbox {
+  margin-left: 2.5rem;
+}
+
+/*******************************************************************************
+CKEditor.
+*******************************************************************************/
+
+/* Combo panels (menus) */
+.cke.cke_panel.cke_combopanel {
+  width: auto !important;
+  max-width: 200px;
+  border: 1px solid var(--colorGinBorder) !important;
+  box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
+  padding: 5px;
+}
+
+/*******************************************************************************
+Various.
+*******************************************************************************/
+
+/* Images inside text blocks (like icons used inside field tooltips). */
+.inline-text-image {
+  vertical-align: middle;
+  padding: 0 0.25em;
+  display: inline-block;
+}

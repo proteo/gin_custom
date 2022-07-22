@@ -1,0 +1,17 @@
+{
+  "name": "proteo/gin_custom",
+  "description": "A Drupal module providing custom style and functionality enhancements to the Gin theme.",
+  "type": "drupal-custom-module",
+  "homepage": "https://github.com/proteo/gin_custom",
+  "license": "GPL-3.0+",
+  "authors": [
+    {
+      "name": "Proteo",
+      "email": "me@proteo.dev"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "drupal/core": "^9.2"
+  }
+}

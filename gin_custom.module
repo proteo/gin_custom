@@ -1,0 +1,32 @@
+<?php
+
+/**
+ * @file
+ * Gin Integration module file.
+ */
+
+use Drupal\Core\Asset\AttachedAssetsInterface;
+
+/**
+ * Implements hook_page_attachments().
+ */
+function gin_custom_page_attachments(array &$attachments) {
+  // Only add custom styling if the Gin theme is active.
+  if (\Drupal::theme()->getActiveTheme()->getName() === 'gin') {
+    $attachments['#attached']['library'][] = 'gin_custom/gin';
+  }
+}
+
+/**
+ * Implements hook_css_alter().
+ */
+function gin_custom_css_alter(&$css, AttachedAssetsInterface $assets) {
+  // Since our stylesheet provides overrides for the Gin theme, we need it to be
+  // loaded *after* theme libraries and unfortunately Drupal seems to ignore the
+  // THEME CSS group assigned in the library file.
+  $css_file = 'modules/custom/gin_custom/css/gin_custom.css';
+  if (isset($css[$css_file])) {
+    $css[$css_file]['group'] = CSS_THEME;
+    $css[$css_file]['weight'] = 300;
+  }
+}
