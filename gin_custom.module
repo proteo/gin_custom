@@ -38,3 +38,11 @@ function gin_custom_css_alter(&$css, AttachedAssetsInterface $assets) {
 function gin_custom_ckeditor_css_alter(array &$css, Editor $editor) {
   $css[] = \Drupal::service('extension.list.module')->getPath('gin_custom') . '/css/gin-custom-ckeditor.css';
 }
+
+/**
+ * Implements hook_preprocess_fieldset().
+ */
+function gin_custom_preprocess_fieldset(&$variables) {
+  // Move fieldset description text before field contents.
+  $variables['description_display'] = 'before';
+}
