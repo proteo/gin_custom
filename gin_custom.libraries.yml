@@ -1,11 +1,11 @@
 # Gin theme customizations.
 gin:
   js:
-    js/gin_custom.js: {}
+    js/gin-custom.js: {}
   dependencies:
     - core/jquery
     - core/drupal
     - core/jquery.once
   css:
     theme:
-      css/gin_custom.css: {}
+      css/gin-custom.css: {}
