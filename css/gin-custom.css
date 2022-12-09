@@ -60,6 +60,14 @@ Read-only form elements.
 Vertical tabs
 *******************************************************************************/
 
+.vertical-tabs .vertical-tabs__menu {
+  width: 16em !important;
+}
+
+.vertical-tabs .vertical-tabs__items {
+  margin-left: 16em !important;
+}
+
 .vertical-tabs__menu-item-summary {
   color: var(--colorGinTextLight);
   font-size: 0.79rem;
@@ -328,6 +336,11 @@ CKEditor.
   border: 1px solid var(--colorGinBorder) !important;
   box-shadow: 0 1px 3px rgba(0,0,0, 0.25);
   padding: 5px;
+}
+
+/* Add a visual separator to the toolbar */
+.cke .cke_top {
+  border-bottom: 1px solid #919297 !important;
 }
 
 /*******************************************************************************

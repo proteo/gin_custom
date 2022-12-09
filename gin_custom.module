@@ -6,6 +6,7 @@
  */
 
 use Drupal\Core\Asset\AttachedAssetsInterface;
+use Drupal\editor\Entity\Editor;
 
 /**
  * Implements hook_page_attachments().
@@ -29,4 +30,11 @@ function gin_custom_css_alter(&$css, AttachedAssetsInterface $assets) {
     $css[$css_file]['group'] = CSS_THEME;
     $css[$css_file]['weight'] = 300;
   }
+}
+
+/**
+ * Implements hook_ckeditor_css_alter().
+ */
+function gin_custom_ckeditor_css_alter(array &$css, Editor $editor) {
+  $css[] = \Drupal::service('extension.list.module')->getPath('gin_custom') . '/css/gin-custom-ckeditor.css';
 }
