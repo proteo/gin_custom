@@ -1,5 +1,5 @@
 name: Gin Customizations
 description: Provides style and functionality enhancements to the Gin theme.
 type: module
-core_version_requirement: ^9
+core_version_requirement: ^9.2 || ^10
 package: Other
