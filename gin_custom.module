@@ -25,7 +25,7 @@ function gin_custom_css_alter(&$css, AttachedAssetsInterface $assets) {
   // Since our stylesheet provides overrides for the Gin theme, we need it to be
   // loaded *after* theme libraries and unfortunately Drupal seems to ignore the
   // THEME CSS group assigned in the library file.
-  $css_file = 'modules/custom/gin_custom/css/gin_custom.css';
+  $css_file = 'modules/custom/gin_custom/css/gin-custom.css';
   if (isset($css[$css_file])) {
     $css[$css_file]['group'] = CSS_THEME;
     $css[$css_file]['weight'] = 300;
