@@ -107,6 +107,17 @@ Media library
   box-shadow: none;
 }
 
+/* Fixes the appearance floating "Remove" button on media items. */
+.media-library-item__remove,
+.media-library-item__remove.button,
+.media-library-item__remove.button:first-child,
+.media-library-item__remove.button:disabled,
+.media-library-item__remove.button:disabled:active,
+.media-library-item__remove.button:hover,
+.media-library-item__remove.button:focus {
+  background-size: 1rem 1rem;
+}
+
 /*******************************************************************************
 Image crop widget
 *******************************************************************************/
