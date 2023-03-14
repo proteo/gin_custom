@@ -91,6 +91,7 @@ Media library
 
 #media-library-wrapper {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Remove unnecessary left border from the outer container */
