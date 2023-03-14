@@ -89,6 +89,10 @@ Vertical tabs
 Media library
 *******************************************************************************/
 
+#media-library-wrapper {
+  margin-top: 0;
+}
+
 /* Remove unnecessary left border from the outer container */
 #media-library-wrapper .media-library-content {
   border: none;
